@@ -1,19 +1,23 @@
 module.exports = {
   entry: './index.js',
+  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015'],
-        },
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  // settings for webpack-serve
+  serve: {
+    content: [__dirname],
+    hot: true,
+    https: false,
   },
 };
