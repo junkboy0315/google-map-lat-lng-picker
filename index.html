@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>GotsuManage</title>
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="yiATIPPdD708Albiw7MMsrAipyRbAe0MxfSfbqq7vhdRD0IwQEQkqOU52D4r4XNoLF4aPeBj+IUsZIyrusjZjQ==">
+
+
+    <link rel="stylesheet" media="all" href="/assets/application-35729bfbaf9967f119234595ed222f7ab14859f304ab0acc5451afb387f637fa.css"
+        data-turbolinks-track="reload">
+    <script src="/assets/application-703b6b47238f9cb6926bf1ee855f580263062e72a8bd2a1d7174dc7b8317482b.js" data-turbolinks-track="reload"></script>
+    <script src="/dist/main.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<style id="stylish-5" class="stylish" type="text/css">
+    @font-face {
+        font-family: "ＭＳ Ｐゴシック";
+        src: local("Noto Sans CJK JP");
+    }
+
+    @font-face {
+        font-family: "ＭＳ ゴシック";
+        src: local("Source Han Code JP N");
+    }
+
+    @font-face {
+        font-family: "Meiryo";
+        src: local("Noto Sans CJK JP");
+    }
+
+    @font-face {
+        font-family: "meiryo";
+        src: local("Noto Sans CJK JP");
+    }
+
+    /* 游ゴシックは常にMediumで　*/
+
+    @font-face {
+        font-family: "Yu Gothic";
+        src: local("Yu Gothic Medium"), local("游ゴシック Medium");
+    }
+
+    @font-face {
+        font-family: "Yu Gothic";
+        src: local("Yu Gothic Bold"), local("游ゴシック Bold");
+        font-weight: bold;
+    }
+
+    @font-face {
+        font-family: "游ゴシック";
+        src: local("Yu Gothic Medium"), local("游ゴシック Medium");
+    }
+
+    @font-face {
+        font-family: "游ゴシック";
+        src: local("Yu Gothic Bold"), local("游ゴシック Bold");
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <h1>New Photo</h1>
+
+
+    /photos
+
+    <form enctype="multipart/form-data" action="/photos" accept-charset="UTF-8" method="post">
+        <input name="utf8" type="hidden" value="✓">
+        <input type="hidden" name="authenticity_token" value="yiATIPPdD708Albiw7MMsrAipyRbAe0MxfSfbqq7vhdRD0IwQEQkqOU52D4r4XNoLF4aPeBj+IUsZIyrusjZjQ=="> 作成日
+        <input type="text" name="createDate" id="createDate"> 作成者
+        <input type="text" name="theUploader" id="theUploader"> タイトル
+        <input type="text" name="theTitle" id="theTitle"> 詳細
+        <input type="text" name="theDetail" id="theDetail"> 位置情報
+        <input type="text" name="theLocation" id="theLocation"> 今の画像
+        <input type="file" name="fileupload[new_image]" id="fileupload_new_image"> 昔の画像
+        <input type="file" name="fileupload[old_image]" id="fileupload_old_image">
+        <input type="submit" name="commit" value="Submit" data-disable-with="Submit">
+    </form>
+
+    <a href="/photos">Back</a>
+
+
+
+</body>
+
+</html>
